@@ -5,7 +5,7 @@ import styles from './HeaderLinks.module.scss';
 
 const HeaderLinks: React.FC = () => {
   return (
-    <ul className={styles.links}>
+    <ul className={styles.links} role="navigation">
       <li className={styles.link}>
         <span className={styles.text}>Dashboard</span>
       </li>

@@ -1,0 +1,157 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Task2.tsx > renders correctly when there is a tag param and data has loaded 1`] = `
+<div>
+  <div
+    class="Task2"
+  >
+    <div
+      aria-busy="false"
+      aria-live="polite"
+    >
+      <h1
+        class="_heading_32ce72 _loadingIndicator_32ce72"
+      >
+        Coloured Cars
+      </h1>
+      <div
+        class="_imagesWrapper_32ce72"
+      >
+        <div
+          class="_imageWrapper_32ce72"
+        >
+          <img
+            alt="A red car"
+            class="_image_32ce72"
+            loading="lazy"
+            src="https://example.com/image1.webp"
+          />
+        </div>
+        <div
+          class="_imageWrapper_32ce72"
+        >
+          <img
+            alt="A blue car"
+            class="_image_32ce72"
+            loading="lazy"
+            src="https://example.com/image2.webp"
+          />
+        </div>
+        <div
+          class="_imageWrapper_32ce72"
+        >
+          <img
+            alt="A green car"
+            class="_image_32ce72"
+            loading="lazy"
+            src="https://example.com/image3.webp"
+          />
+        </div>
+        <div
+          class="_imageWrapper_32ce72"
+        >
+          <img
+            alt="A yellow car"
+            class="_image_32ce72"
+            loading="lazy"
+            src="https://example.com/image4.webp"
+          />
+        </div>
+        <div
+          class="_imageWrapper_32ce72"
+        >
+          <img
+            alt="A purple car"
+            class="_image_32ce72"
+            loading="lazy"
+            src="https://example.com/image5.webp"
+          />
+        </div>
+        <div
+          class="_imageWrapper_32ce72"
+        >
+          <img
+            alt="A pink car"
+            class="_image_32ce72"
+            loading="lazy"
+            src="https://example.com/image6.webp"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Task2.tsx > renders correctly when there is a tag param and data is loading 1`] = `
+<div>
+  <div
+    class="Task2"
+  >
+    <div
+      aria-busy="true"
+      aria-live="polite"
+      class="_loading_32ce72"
+    >
+      <h1
+        class="_heading_32ce72 _loadingIndicator_32ce72"
+      >
+        Coloured Cars
+      </h1>
+      <div
+        class="_imagesWrapper_32ce72"
+      >
+        <div
+          class="_imageWrapper_32ce72 _loadingIndicator_32ce72"
+        />
+        <div
+          class="_imageWrapper_32ce72 _loadingIndicator_32ce72"
+        />
+        <div
+          class="_imageWrapper_32ce72 _loadingIndicator_32ce72"
+        />
+        <div
+          class="_imageWrapper_32ce72 _loadingIndicator_32ce72"
+        />
+        <div
+          class="_imageWrapper_32ce72 _loadingIndicator_32ce72"
+        />
+        <div
+          class="_imageWrapper_32ce72 _loadingIndicator_32ce72"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Task2.tsx > renders correctly when there is no tag param 1`] = `
+<div>
+  <div
+    class="Task2"
+  >
+    <div
+      class="_searchPrompt_32ce72"
+    >
+      <svg
+        class="_searchIcon_32ce72"
+        fill="none"
+        height="48"
+        viewBox="0 0 48 48"
+        width="48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M38.6586 10.4436C43.9307 15.7157 43.9307 24.2635 38.6586 29.5355C33.745 34.4491 25.9862 34.7832 20.6857 30.5379L8.60657 42.617L6.48525 40.4957L18.5643 28.4166C14.319 23.1161 14.6532 15.3572 19.5667 10.4436C24.8388 5.17157 33.3865 5.17157 38.6586 10.4436ZM36.5373 12.565C32.4368 8.46446 25.7886 8.46446 21.688 12.565C17.5875 16.6655 17.5875 23.3137 21.688 27.4142C25.7886 31.5147 32.4368 31.5147 36.5373 27.4142C40.6378 23.3137 40.6378 16.6655 36.5373 12.565Z"
+          fill="#ffffff"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <p>
+        Use the search to find vehicles
+      </p>
+    </div>
+  </div>
+</div>
+`;

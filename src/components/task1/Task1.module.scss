@@ -1,0 +1,89 @@
+@use '../../styles/color' as color;
+
+$x-padding: 8px;
+$search-icon-width: 24px;
+$gap: 4px;
+
+.inputWrapper {
+  border-radius: 9px;
+  border: 1px solid color.$light-grey-1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $gap;
+  padding: 8px $x-padding;
+
+  &:focus-within {
+    border-color: color.$white;
+
+    > .searchIcon {
+      stroke: color.$white;
+    
+      path {
+        fill: color.$white;
+      }
+    }
+  }
+
+  > .searchIcon {
+    stroke: color.$light-grey-1;
+    width: $search-icon-width;
+    height: 24px;
+  
+    path {
+      fill: color.$light-grey-1;
+    }
+  }
+
+  > input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: color.$light-grey-1;
+    line-height: 24px;
+
+    &::placeholder {
+      opacity: 1;
+    }
+
+    &:focus {
+      color: color.$white;
+    }
+  }
+}
+
+.popover {
+  width: calc($search-icon-width + var(--trigger-width) + (2 * $x-padding) + $gap);
+  margin-left: calc(0px - $search-icon-width - $x-padding - $gap);
+}
+
+.listbox {
+  margin-top: 8px;
+  background-color: color.$dark-grey-3;
+  padding: 0 8px;
+  border-radius: 4px;
+
+  /*
+    TECH DEBT: The ComboBox component is buggy when intialised with an empty array.
+    Initialising with an empty string is a temporary workaround but this means that a
+    listbox containing a single emmpty link can be shown. This CSS is a temporary
+    workaround to hide the listbox when it contains a single empty link.
+    See https://github.com/adobe/react-spectrum/issues/5234 for more details and to assess
+    progress on a fix.
+  */
+  &:has(:only-child:empty) {
+    display: none;
+  }
+
+  > a {
+    display: block;
+    color: color.$white;
+    text-decoration: none;
+    border-bottom: 1px solid color.$light-grey-1;
+    padding: 8px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
