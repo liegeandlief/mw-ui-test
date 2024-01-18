@@ -5,15 +5,18 @@ import Task1 from '../task1/Task1';
 import HeaderLinks from './HeaderLinks';
 
 import styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
       </div>
+      <Task1 />
       <div className={styles.nav}>
-        <Task1 />
         <HeaderLinks />
       </div>
     </header>

@@ -1,0 +1,66 @@
+@use '../../styles/color' as color;
+@use '../../styles/typography' as typography;
+
+.searchPrompt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px auto 0;
+  gap: 24px;
+  max-width: 393px;
+  text-align: center;
+
+  .searchIcon {
+    stroke: color.$white;
+    width: 48px;
+    height: 48px;
+
+    path {
+      fill: color.$white;
+    }
+  }
+
+  p {
+    @extend %heading1;
+  }
+}
+
+.heading {
+  @extend %heading1;
+  display: inline-block;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+$images-per-row: 3;
+$images-gap: 12px;
+
+.imagesWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: $images-gap;
+}
+
+.imageWrapper {
+  width: calc((100% / $images-per-row) - (($images-gap * ($images-per-row - 1)) / $images-per-row));
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: color.$dark-grey-3;
+}
+
+.image {
+  object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.loading {
+  .loadingIndicator {
+    color: transparent;
+    background-color: color.$dark-grey-3;
+  }
+}
